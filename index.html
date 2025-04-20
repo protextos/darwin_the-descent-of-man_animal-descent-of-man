@@ -16,6 +16,38 @@ th, td {
 padding: 5px;
 }
 
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .tooltip .tooltip-text {
+      visibility: hidden;
+      width: max-content;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      padding: 5px 8px;
+      border-radius: 4px;
+
+      /* Positioning the tooltip */
+      position: absolute;
+      z-index: 1;
+      bottom: 125%; /* You can change this to 'top' or 'right', etc. */
+      left: 50%;
+      transform: translateX(-50%);
+
+      opacity: 0;
+      transition: opacity 0.3s;
+      white-space: nowrap;
+    }
+
+    .tooltip:hover .tooltip-text {
+      visibility: visible;
+      opacity: 1;
+    }
+  
 </style>
 </head>
 <body>
@@ -31,11 +63,87 @@ padding: 5px;
         <th>Topic</th>
     </tr>
      <tr>
-        <td>Immanuel Kant</td>
-        <td>Critique of Pure Reason</td>
+        <td><a href="https://en.wikipedia.org/wiki/Immanuel_Kant" target="_blank">Immanuel Kant</a></td>
+        <td><a href="https://en.wikipedia.org/wiki/Critique_of_Pure_Reason" target="_blank">Critique of Pure Reason</a></td>
         <td>1781</td>
         <td>Prologue</td>
         <td>Destiny of reason</td>
+     </tr>
+</table>
+
+<br>
+
+<table> 
+    <tr>
+        <th>Disciplines</th>
+    </tr>
+  <tr>
+        <td>Philosophy</td>
+        <td>Metaphysics</td>
+        <td>Epistemology</td>
+        <td>Anthropology</td>
+    </tr>
+</table>
+
+<br>
+
+<table> 
+    <tr>
+        <th>Index</th>
+        <th>Cover</th>
+        <th>Reference</th>
+        <th>Key points</th>
+    </tr>
+  <tr>
+        <td>1</td>
+        <td>Reference - Datos</td>
+        <td>English</td>
+        <td>German</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Analysis - Key points</td>
+        <td>Termos</td>
+        <td>German</td>
+        <td>Chronology</td>
+    </tr>
+</table>
+
+<div style="width: 100%; height: 2px; background-color: gray; margin: 50px 0;"></div>
+
+<table> 
+    <tr>
+        <td>  
+          <div class="tooltip">
+            <a href="https://en.wikipedia.org/wiki/Immanuel_Kant" target="_blank">Immanuel Kant</a>
+          <span class="tooltip-text">✨Author</span>
+          </div>
+        </td>
+        <td>
+          <div class="tooltip">
+            <a href="https://en.wikipedia.org/wiki/Critique_of_Pure_Reason" target="_blank">Critique of Pure Reason</a>
+                <span class="tooltip-text">✨Title</span>
+          </div>
+          </td>
+        <td>
+                    <div class="tooltip">
+                      1781
+            <span class="tooltip-text">✨Year</span>
+          </div>
+          </td>
+        <td>
+            <div class="tooltip">
+          Prologue
+              <span class="tooltip-text">✨Excerpt</span>
+          </div>
+        </td>
+        <td>
+          <div class="tooltip">
+          Destiny of reason
+          <span class="tooltip-text">✨Topic</span>
+          </div>
+        
+        </td>
      </tr>
 </table>
 
