@@ -1,2 +1,2 @@
-# kant
-https://en.wikipedia.org/wiki/Immanuel_Kant
+# Darwwin
+https://en.wikipedia.org/wiki/Charles_Darwin
